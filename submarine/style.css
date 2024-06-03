@@ -1,0 +1,96 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+#progress {
+  color: rgb(255, 46, 46);
+  font-size: 3vw;
+  font-family: Mukta;
+}
+.subheads {
+    color: rgb(255, 35, 35);
+    font-size: 2vw;
+    font-family: Mukta;
+    margin: 1px;
+}
+.submarinelihead{
+  color: rgb(201, 0, 0);
+  font-size: 1.7vw;
+  font-family: Mukta;
+  overflow: hidden;
+  padding-left: 2vw;
+}
+body {
+  background-image: url(images/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+}
+.board {
+  background-image: url(images/ocean.jpg);
+  background-size: cover;
+  width: 70vw;
+  height: 120vh;
+  max-height: 600px;
+  border: 3px solid blue;
+  display: grid;
+  grid-template-columns: 14vw 14vw 14vw 14vw 14vw;
+  grid-template-rows: 7.5em 7.5em 7.5em 7.5em 7.5em;
+}
+#submarineli {
+    border: 2px solid black;
+    width: 15vw;
+    height: 120vh;
+    max-height: 600px;
+    background-image: url(images/metalnet.jpg);
+}
+.missiles{
+    width: 10vw;
+    height: 5vh;
+}
+#missilebox {
+    display: flex;
+    flex-direction: column;
+    background-image: url(images/metal.jpg);
+    border: 2px solid black;
+    width: 15vw;
+    height: 120vh;
+    max-height: 600px;
+}
+.box {
+  border: 1.7px solid red;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.aim {
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  width: 6.5vw;
+  height: 12vh;
+  overflow: hidden;
+}
+.blast {
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  width: 7vw;
+  height: 14vh;
+  overflow: hidden;
+}
+.submarine {
+  width: 14vw;
+  height: 14vh;
+}
+.submarineside {
+  width: 14vw;
+  height: 14vh;
+}
