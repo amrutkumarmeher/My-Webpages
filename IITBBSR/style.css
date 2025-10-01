@@ -1,0 +1,37 @@
+#main{
+    background-color: rgb(147, 183, 252);
+    height: 37pc;
+    width: 45pc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#logo{
+    width: 7pc;
+}
+#headtitle{
+    display: flex;
+    column-gap: 30px;
+}
+html{
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("./iitback.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.headings{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+h3{
+    font-family: 'tomorrow';
+}
+strong{
+    font-family: 'tomorrow';
+}

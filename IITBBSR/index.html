@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Register</title>
+    <link rel="shortcut icon" href="iitlogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <form action="get" id="main">
+      <div id="headtitle">
+        <span>
+        <img src="IIT.png" alt="IIT BBSR logo" id="logo" />
+        </span>
+        <span>
+        <h1 class="nomargin">IIT</h1>
+        <h2 class="nomargin">Bhubaneswar</h2>
+        </span>
+      </div>
+      <div class="headings">
+        <h1>Admission form</h1>
+        <div>
+          <span>
+            <caption>
+              <strong> Name </strong>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Enter your name"
+              />
+            </caption>
+          </span>
+          <span>
+            <caption>
+              <strong> Candiate ID </strong>
+              <input
+                type="text"
+                name="id"
+                id="roll"
+                placeholder="Enter your id"
+              />
+            </caption>
+          </span>
+        </div>
+      </div>
+      <div class="headings">
+        <h3>Gender</h3>
+        <div>
+          <input type="radio" name="gender" id="male" />
+          <label for="male">Male</label>
+          <input type="radio" name="gender" id="female" />
+          <label for="female">Female</label>
+        </div>
+      </div>
+      <div class="headings">
+        <h3>Select Category</h3>
+        <div>
+          <input type="radio" name="category" id="General" />
+          <label for="General">General</label>
+          <input type="radio" name="category" id="OBC" />
+          <label for="OBC">OBC</label>
+          <input type="radio" name="category" id="SC/ST" />
+          <label for="SC/ST">SC/ST</label>
+        </div>
+        <div class="headings">
+          <h3>Write your complain</h3>
+          <textarea name="complain" id="comp" cols="90" rows="6"></textarea>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>

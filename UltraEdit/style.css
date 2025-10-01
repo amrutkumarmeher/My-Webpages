@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --navHeight: 106px;
+  --navColor: rgb(49, 49, 49);
+  --mainColor: rgb(37, 37, 37);
+  --downloadBoxesBG: rgb(249, 249, 249);
+}
+body {
+  width: 97vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+img {
+  margin: 7px;
+}
+nav {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+}
+button {
+  cursor: pointer;
+}
+nav li {
+  color: var(--navColor);
+  font-size: 0.9em;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  cursor: pointer;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  width: 70vw;
+  color: var(--mainColor);
+}
+h1,
+p {
+  text-align: center;
+}
+.downloadoption {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  background-color: var(--downloadBoxesBG);
+  width: 270px;
+  height: 170px;
+  text-align: center;
+  word-break: break-all;
+  padding: 23px;
+  font-size: 0.7em;
+}
+.downloadoption * {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+.hash {
+  font-size: 0.5em;
+}
+.versionName {
+  font-weight: 900;
+  font-size: 1.25rem;
+}
+.downloadoption button {
+  width: 120px;
+  height: 30px;
+  border-radius: 7px;
+  border: 0px;
+  background-color: rgb(92, 184, 92);
+  color: white;
+  font-size: 0.99em;
+  font-weight: 700;
+}
+#downloadsection {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  color: var(--mainColor);
+}
+#toplogo {
+  height: var(--navHeight);
+  width: 23%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+#navList {
+  list-style: none;
+  width: 32vw;
+  height: var(--navHeight);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#searchdownload {
+  width: 30%;
+  height: var(--navHeight);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#downNav {
+  height: 40px;
+  width: 133px;
+  border: 2px solid black;
+  font-weight: bolder;
+  color: rgb(46, 46, 46);
+  background-color: white;
+  border-radius: 4px;
+}
+#search {
+  height: 40px;
+  width: 98px;
+  border: 0px;
+  cursor: text;
+}
+#searchButton {
+  height: 40px;
+  width: 40px;
+  border: 0px;
+  font-size: large;
+  background-color: white;
+}
+#content {
+  margin: 10vh 0 10vh 0;
+  text-align: center;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  width: 100%;
+  height: 40vh;
+}
+#content h1 {
+  font-size: 3rem;
+  margin: 0 0 5vh 0;
+  font-weight: normal;
+}
+#content p {
+  font-size: 1.5rem;
+  margin: 5vh 0 5vh 0;
+  font-weight: 400;
+}
+#content button {
+  width: 292px;
+  height: 50px;
+  background-color: rgb(0, 182, 209);
+  border: 0;
+  border-radius: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  font-size: 0.799em;
+  color: white;
+}
+#content button a {
+  font-weight: 800;
+  text-decoration: none;
+  color: white;
+}
+#content button a:visited {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  text-decoration: none;
+  color: white;
+}
+#sectionhead {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+#sectiontext {
+  margin: 0 0 0 15px;
+}
+#sectiontext * {
+  display: inline;
+}
+#sectiontext h2 {
+  font-weight: 400;
+}
+#sectiontext a {
+  text-decoration: none;
+  color: var(--mainColor);
+}
+#sectiontext a:visited {
+  text-decoration: none;
+  color: var(--mainColor);
+}
+#downloads {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 25px;
+}

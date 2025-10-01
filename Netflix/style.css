@@ -1,0 +1,715 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --netflixRed: rgb(229, 9, 20);
+  --littleGrey: rgb(167, 167, 167);
+}
+body {
+  width: calc(100vw - (100vw - 100%));
+  height: auto;
+  background-color: black;
+  color: white;
+  background-image: url(assets/background.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: auto 80vh;
+  box-shadow: inset 0px 20px 250px 80px black;
+  backdrop-filter: brightness(55%);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+header {
+  width: 100%;
+  height: 8vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+header .logo img {
+  width: auto;
+  height: 100%;
+}
+header .logo {
+  width: auto;
+  height: 25px;
+  margin: 22px 22px;
+}
+header .logoContainer {
+  width: 35%;
+  height: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: top;
+}
+header .opts {
+  width: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0 9vw;
+}
+header .opts .LanguageButton {
+  height: 32px;
+  width: 60px;
+  margin: 10px;
+  padding: 5px;
+  background-color: transparent;
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 0fr 1fr;
+  border-radius: 5px;
+  border: 1px solid var(--littleGrey);
+}
+header .opts .LanguageButton * {
+  font-weight: 600;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .SignIn {
+  color: white;
+  background-color: var(--netflixRed);
+  font-weight: 600;
+  height: 32px;
+  width: 75px;
+  border-radius: 5px;
+  border: 0px;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 60px 0;
+}
+main .downContent {
+  background-color: black;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .topContent {
+  padding: 20px;
+  height: auto;
+}
+main .topContent h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 4vh 0;
+}
+main .topContent h3 {
+  font-size: 1.5rem;
+  margin: 20px 0;
+}
+main .topContent p {
+  font-size: 1rem;
+  margin: 15px 0;
+}
+main .topContent .opts {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.opts .emailInput {
+  width: 80vw;
+  height: 55px;
+  color: white;
+  background-color: rgba(36, 36, 36, 0.5);
+  border: 1px solid rgb(170, 170, 170);
+  border-radius: 5px;
+  padding: 0 5px;
+}
+main .opts button {
+  width: 180px;
+  height: 55px;
+  background-color: var(--netflixRed);
+  color: white;
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin: 20px;
+  border: 0px;
+  border-radius: 5px;
+}
+main .curveWrapper {
+  position: relative;
+  height: 9vh;
+  width: 100%;
+  overflow: hidden;
+}
+main .curveWrapper .curve {
+  transform: translate(-10%);
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  height: 20vw;
+  width: 120%;
+  background-image: linear-gradient(
+    to right,
+    black,
+    rgb(29, 11, 19),
+    rgb(186, 31, 82),
+    rgb(214, 10, 21),
+    rgb(186, 31, 82),
+    rgb(29, 11, 19),
+    black
+  );
+  border-radius: 800% 800% 0 0;
+}
+main .curveWrapper .curveC {
+  position: absolute;
+  top: 4px;
+  z-index: 2;
+  transform: translate(-10%);
+  height: 20vw;
+  width: 120%;
+  background-color: black;
+  border-radius: 800% 800% 0 0;
+  overflow: hidden;
+}
+main .curveWrapper .curveC .bluefume {
+  margin: auto;
+  height: 25px;
+  border-radius: 100%;
+  width: 50vw;
+  background-color: rgb(18, 27, 64);
+  box-shadow: 0px 0px 23px 13px rgb(18, 27, 64);
+}
+main .trendingNow {
+  background-color: black;
+  padding: 0 10px;
+  margin: 0 0 10vh 0;
+  width: 80%;
+  box-sizing: border-box;
+}
+main .trendingNow h2 {
+  text-align: left;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0.7rem 0;
+}
+main .trendingNow .list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  counter-reset: listCount;
+  list-style-type: none;
+}
+main .trendingNow .list img {
+  object-fit: cover;
+  border-radius: 12px;
+  width: 80%;
+}
+main .trendingNow .list li {
+  position: relative;
+  width: 25%;
+  overflow: hidden;
+}
+main .trendingNow .list li::before {
+  color: black;
+  content: counter(listCount);
+  counter-increment: listCount;
+  list-style: decimal;
+  position: absolute;
+  left: 2%;
+  bottom: 3%;
+  font-size: 2.5rem;
+  font-weight: 800;
+  -webkit-text-stroke: 1px white;
+}
+main .reasonsToJoin {
+  background-color: black;
+  width: 90%;
+  height: auto;
+  margin: 0 0 50px 0;
+}
+main .reasonsToJoin > h2 {
+  text-align: left;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0.7rem 0;
+}
+main .reasonsToJoin .list li {
+  list-style: none;
+  position: relative;
+}
+main .reasonsToJoin .list li img {
+  width: 100%;
+  height: 100%;
+}
+main .reasonsToJoin .list .icons {
+  width: auto;
+  height: 60px;
+  position: absolute;
+  bottom: 25px;
+  right: 20px;
+}
+main .reasonsToJoin .list li p {
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--littleGrey);
+}
+main .reasonsToJoin .list {
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  justify-content: space-between;
+}
+main .reasonsToJoin .list li {
+  background-image: linear-gradient(
+    to right bottom,
+    rgb(25, 33, 69),
+    rgb(33, 14, 23)
+  );
+  width: 100%;
+  height: 190px;
+  list-style-position: inside;
+  padding: 15px;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+main .reasonsToJoin .list li h2 {
+  margin: 0 0 15px 0;
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-align: left;
+}
+main .FAQ {
+  width: 90vw;
+}
+main .FAQ > h2 {
+  text-align: left;
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin: 0.7rem 0;
+}
+main .FAQ .list {
+  list-style: none;
+  text-align: left;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+main .FAQ .list li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  background-color: rgb(48, 48, 48);
+}
+main .FAQ .list div {
+  position: absolute;
+  right: 15px;
+  height: 38%;
+  width: auto;
+}
+main .FAQ .list img {
+  width: 100%;
+  height: 100%;
+}
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+footer h3 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin: 15px;
+}
+footer .opts * {
+  margin: 10px;
+}
+footer .opts button {
+  width: 180px;
+  height: 55px;
+  background-color: var(--netflixRed);
+  color: white;
+  font-size: 1.35rem;
+  font-weight: 700;
+  border: 0px;
+  border-radius: 5px;
+}
+footer .opts {
+  width: 90%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+footer .opts .emailInput {
+  width: 100%;
+}
+footer .opts button {
+  width: 160px;
+  height: 50px;
+}
+footer #contactPhone {
+  margin: 30px;
+  width: 80%;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-align: left;
+  color: var(--littleGrey);
+}
+footer #contactPhone a {
+  color: var(--littleGrey);
+}
+footer #refs {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 80%;
+  margin: 0 0 40px 0;
+}
+footer #refs li {
+  text-align: left;
+  height: 21px;
+  margin: 10px;
+}
+footer #refs li a {
+  color: var(--littleGrey);
+}
+footer .opts1 {
+  width: 80%;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-content: flex-start;
+}
+footer .opts1 p {
+  width: fit-content;
+}
+footer .opts1 .LanguageButton .langContent::after {
+  content: "English";
+}
+footer .opts1 .LanguageButton {
+  border: 1px solid var(--littleGrey);
+  box-sizing: border-box;
+  height: 32px;
+  width: 130px;
+  padding: 5px;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  border-radius: 5px;
+  border: 1px solid rgba(102, 102, 102, 0.5);
+  font-size: 1rem;
+}
+footer .opts1 .LanguageButton * {
+  font-weight: 600;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (min-width: 600px) {
+  body {
+    background-position: top center;
+    background-size: 100vw auto;
+  }
+  header .opts .LanguageButton .langContent::after {
+    content: "English";
+  }
+  header .opts .LanguageButton {
+    height: 32px;
+    width: 120px;
+    margin: 10px;
+    padding: 5px;
+    background-color: transparent;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    border-radius: 5px;
+    border: 1px solid rgb(102, 102, 102);
+  }
+  main .topContent {
+    margin: 4vh 0 4vh 0;
+    width: 80%;
+  }
+  main .topContent .opts {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  main .topContent .opts .emailInput {
+    width: 220px;
+  }
+  main .topContent h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 2vh 0 2vh 0;
+  }
+  main .trendingNow .list li::before {
+    color: black;
+    content: counter(listCount);
+    counter-increment: listCount;
+    list-style: decimal;
+    position: absolute;
+    left: 2%;
+    bottom: 5%;
+    font-size: 4rem;
+    font-weight: 700;
+    -webkit-text-stroke: 1px white;
+  }
+  footer .opts {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  footer .opts .emailInput {
+    width: 70%;
+  }
+  footer #refs {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 900px) {
+  body {
+    background-position: top center;
+    background-size: auto auto;
+  }
+  header .logo {
+    height: 40px;
+    margin: 0 20px;
+  }
+  header .logoContainer {
+    align-items: center;
+    justify-content: center;
+  }
+  header .opts .LanguageButton .langContent::after {
+    content: "English";
+  }
+  header .opts .LanguageButton {
+    height: 32px;
+    width: 120px;
+    margin: 10px;
+    padding: 5px;
+    background-color: transparent;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    border-radius: 5px;
+    border: 1px solid rgb(102, 102, 102);
+  }
+  header .logo {
+    height: 40px;
+    margin: 0 20px;
+  }
+  header {
+    height: 15vh;
+  }
+  header .opts .LanguageButton .langContent::after {
+    content: "English";
+  }
+  header .opts .LanguageButton {
+    height: 32px;
+    width: 120px;
+    margin: 10px;
+    padding: 5px;
+    background-color: transparent;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    border-radius: 5px;
+    border: 1px solid rgb(102, 102, 102);
+  }
+  main .topContent {
+    margin: 5vh 0 5vh 0;
+    width: 50%;
+  }
+  main .topContent .opts {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 2vh;
+  }
+  main .topContent .opts .emailInput {
+    width: 220px;
+  }
+  main .topContent h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 2vh 0 2vh 0;
+  }
+  main .trendingNow .list li::before {
+    color: black;
+    content: counter(listCount);
+    counter-increment: listCount;
+    list-style: decimal;
+    position: absolute;
+    left: 2%;
+    bottom: 5%;
+    font-size: 5.5rem;
+    font-weight: 800;
+    -webkit-text-stroke: 1px white;
+  }
+  main .reasonsToJoin {
+    width: 80vw;
+  }
+  main .reasonsToJoin .list {
+    height: 455px;
+    display: flex;
+    align-content: space-between;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  main .reasonsToJoin .list li {
+    background-image: linear-gradient(
+      to right bottom,
+      rgb(25, 33, 69),
+      rgb(33, 14, 23)
+    );
+    width: 39.5vw;
+    height: 220px;
+    list-style-position: inside;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 20px;
+  }
+  main .reasonsToJoin .list li h2 {
+    margin: 0 0 15px 0;
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-align: left;
+  }
+  main .FAQ {
+    width: 80vw;
+  }
+  footer .opts {
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  footer .opts .emailInput {
+    width: 450px;
+  }
+  footer #refs {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1290px) {
+  body {
+    background-position: top center;
+    background-size: 100% auto;
+  }
+  header .logoContainer {
+    align-items: center;
+    justify-content: center;
+  }
+  header .opts .LanguageButton .langContent::after {
+    content: "English";
+  }
+  header .opts .LanguageButton {
+    height: 32px;
+    width: 120px;
+    margin: 10px;
+    padding: 5px;
+    background-color: transparent;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    border-radius: 5px;
+    border: 1px solid rgb(102, 102, 102);
+  }
+  header .logo {
+    height: 40px;
+    margin: 0 20px;
+  }
+  header {
+    height: 15vh;
+  }
+  main .topContent {
+    margin: 5vh 0 5vh 0;
+    width: 50%;
+  }
+  main .topContent .opts {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 2vh;
+  }
+  main .topContent .opts .emailInput {
+    width: 380px;
+  }
+  main .topContent h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin: 2vh 0 2vh 0;
+  }
+  main .trendingNow .list li::before {
+    color: black;
+    content: counter(listCount);
+    counter-increment: listCount;
+    list-style: decimal;
+    position: absolute;
+    left: 2%;
+    bottom: 10%;
+    font-size: 5.5rem;
+    font-weight: 800;
+    -webkit-text-stroke: 1px white;
+  }
+  main .reasonsToJoin {
+    width: 80vw;
+    height: auto;
+  }
+  main .reasonsToJoin .list {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 340px;
+  }
+  main .reasonsToJoin .list li {
+    background-image: linear-gradient(
+      to right bottom,
+      rgb(25, 33, 69),
+      rgb(33, 14, 23)
+    );
+    width: 19vw;
+    height: 320px;
+    list-style-position: inside;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 20px;
+  }
+  main .reasonsToJoin .list li h2 {
+    margin: 0 0 15px 0;
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-align: left;
+  }
+  main .FAQ {
+    width: 80vw;
+  }
+  footer .opts {
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  footer .opts .emailInput {
+    width: 450px;
+  }
+  footer #refs {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}

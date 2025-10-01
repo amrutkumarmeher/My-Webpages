@@ -1,0 +1,100 @@
+::root {
+  --pageWidth: 98vw;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+.msgico {
+  position: fixed;
+  z-index: 2;
+  bottom: 30px;
+  right: 30px;
+  background-color: rgb(214, 214, 214);
+  padding: 15px;
+  border-radius: 100%;
+}
+.msgico:hover {
+  cursor: pointer;
+}
+.logoico {
+  margin: 0 20px;
+}
+.box {
+  height: 93vh;
+  background-color: bisque;
+  width: var(--pageWidth);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.smallbox {
+  width: 20vw;
+  height: 20vw;
+  background-color: darkgreen;
+}
+.GreetOuterbox {
+  width: var(--pageWidth);
+  height: 70vh;
+  background-color: darkslateblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.greetings {
+  width: 60%;
+  height: 23%;
+  border: 3px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  padding: 30px;
+}
+.greetings p {
+  font-family: "poppins", "roboto";
+  font-size: x-large;
+  font-weight: 800;
+  color: antiquewhite;
+}
+.greetings p::selection {
+  color: black;
+  background-color: yellow;
+}
+nav ul {
+  width: var(--pageWidth);
+  height: 7vh;
+  background-color: crimson;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+header {
+  position: sticky;
+  top: 0px;
+}
+nav li:hover {
+  cursor: pointer;
+  background-color: red;
+}
+li {
+  user-select: none;
+  padding: 0 2vw;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: large;
+  font-family: "poppins", "roboto";
+}
+footer {
+  width: var(--pageWidth);
+  height: 30vh;
+  background-color: rgb(46, 46, 46);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer p {
+  font-size: larger;
+}

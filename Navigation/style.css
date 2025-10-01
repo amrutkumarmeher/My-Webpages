@@ -1,0 +1,44 @@
+:root {
+  --background: rgb(211, 210, 210);
+  --navBackground: rgb(107, 213, 255);
+  --hoverColor: rgb(0, 180, 75);
+  --navFonts: "poppins", "roboto";
+  --textfont: "roboto"
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--background);
+}
+
+nav ul {
+  width: 100vw;
+  height: 8vh;
+  background-color: var(--navBackground);
+  display: flex;
+  justify-content: start;
+}
+nav li {
+  font-size: x-large;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 0 2vw;
+  font-family: var(--navFonts);
+}
+nav li:hover {
+  background-color: var(--hoverColor);
+}
+main{
+    display: inline-block;
+    padding: 20px;
+}
+main p{
+    font-family: var(--textfont);
+}

@@ -1,0 +1,62 @@
+html {
+  background-color: rgb(231, 231, 231);
+}
+* {
+  border-radius: 12px;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto";
+}
+body {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+.card {
+  box-shadow: 5px 5px 10px ;
+  background-color: white;
+  height: 470px;
+  width: 300px;
+  padding: 6px;
+  margin: auto;
+}
+.image {
+  margin: auto;
+  overflow:hidden;
+  height: 230px;
+  width: 300px;
+}
+.tags {
+  display: flex;
+  flex-direction: row;
+}
+.tag {
+  background-color: rgb(218, 218, 218);
+  color: rgb(121, 121, 121);
+  padding: 3px 6px 3px 6px;
+  margin: 5px;
+}
+.desc {
+  margin: 15px 5px 7px 5px;
+  color: rgb(119, 118, 118);
+}
+.readmore {
+  display: flex;
+  font-weight: 500;
+  font-size: smaller;
+  align-items: center;
+  justify-content: center;
+  color: rgb(35, 119, 214);
+  background-color: rgb(172, 188, 255);
+  height: 35px;
+  width: 100px;
+  margin: auto;
+  cursor:pointer;
+  border-radius: 40px;
+}
+h1 {
+  font-size: xx-large;
+  font-weight: 450;
+  margin: 7px 5px 7px 5px;
+  color: rgb(58, 58, 58);
+}
