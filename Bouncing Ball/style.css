@@ -1,0 +1,73 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+@keyframes XBounce {
+    from {
+        left: 0vw;
+    }
+
+    to {
+        left: calc(100% - 15.6vh);
+    }
+}
+
+@keyframes YBounce {
+    0% {
+        bottom: 50%;
+    }
+
+    25% {
+        bottom: 0%;
+    }
+
+    50% {
+        bottom: 50%;
+    }
+
+    75% {
+        bottom: 0%;
+    }
+
+    100% {
+        bottom: 50%;
+    }
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+body h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: red;
+}
+
+.ballSpace {
+    width: 80vw;
+    height: 80vh;
+    background-color: blue;
+    position: relative;
+}
+
+.ball {
+    width: 15vh;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    background-color: crimson;
+    border-radius: 50%;
+    border: 2.5px solid black;
+    position: absolute;
+    bottom: 0;
+    animation: XBounce 3s ease-in-out infinite alternate both,
+        YBounce 3s linear infinite alternate both;
+}
